@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>你是我最想探索的宇宙疆界</title>
+	<link rel="icon" href="./img/favicon.ico">
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 	<!-- 引入样式 -->
 	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
@@ -17,12 +18,22 @@
 			<p class="textShow">{{text1}}</p>
 			<p>{{text2}}</p>
 		</div>
-		<div>
+		<div class="cardS">
 			<div class="container">
 				<img src="./img/炉石传说-外域的灰烬.png" alt="" />
-				<p class="title">炉石传说</p>
+				<p class="title"><a href="https://hs.blizzard.cn/landing" target="_blank">炉石传说</a> </p>
 				<div class="overlay"></div>
-				<div class="button"><a href="#"> BUTTON </a></div>
+				<div class="button">
+					<p>天梯等级：20<br />酒馆战旗：5500分+ <br />ID：误是人非#5101</p>
+				</div>
+			</div>
+			<div class="container">
+				<img src="./img/炉石传说-外域的灰烬.png" alt="" />
+				<p class="title"><a href="https://hs.blizzard.cn/landing" target="_blank">炉石传说</a> </p>
+				<div class="overlay"></div>
+				<div class="button">
+					<p>天梯等级：20<br />酒馆战旗：5500分+ <br />ID：误是人非#5101</p>
+				</div>
 			</div>
 		</div>
 
@@ -189,23 +200,25 @@
 		width: 500px;
 		height: 300px;
 		left: 0;
+		filter: brightness(0.5);
 	}
 
-	.title {
+	.title a {
 		position: absolute;
 		width: 500px;
 		left: 0;
 		top: 120px;
 		font-weight: 700;
-		font-size: 30px;
+		font-size: 40px;
 		text-align: center;
 		text-transform: uppercase;
+		text-decoration: none;
 		color: white;
 		z-index: 1;
 		transition: top .5s ease;
 	}
 
-	.container:hover .title {
+	.container:hover .title a {
 		top: 90px;
 	}
 
@@ -219,13 +232,14 @@
 		transition: opacity .35s ease;
 	}
 
-	.button a {
+	.button p {
 		width: 200px;
 		padding: 12px 48px;
 		text-align: center;
 		color: white;
 		border: solid 2px white;
 		z-index: 1;
+		margin: 0 auto;
 	}
 
 	.container:hover .button {
