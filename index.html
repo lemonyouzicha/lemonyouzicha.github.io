@@ -14,9 +14,22 @@
   </head>
 
   <body>
-    <div id="app">{{state}}</div>
+    <div id="app">
+      {{state}}
+      <div>
+        <van-grid clickable :column-num="2">
+          <van-grid-item icon="home-o" text="路由跳转" to="/" />
+          <van-grid-item
+            icon="search"
+            text="URL 跳转"
+            url="/vant/mobile.html"
+          />
+        </van-grid>
+      </div>
+    </div>
   </body>
   <script>
+    import { Grid, GridItem } from 'vant
     const { createApp, reactive, toRefs } = Vue
     const data = reactive({
       state: 12,
@@ -28,6 +41,8 @@
         }
       },
     })
+    app.use(Grid)
+    app.use(GridItem)
     app.mount('#app')
   </script>
   <style></style>
